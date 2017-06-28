@@ -1,5 +1,6 @@
 {
   "name": "ionic3-gulp",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "watchPatterns": []
 }
