@@ -1,26 +1,15 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+#### 做了一点小改进,其他地方与ionic3并无区别
+src/config下存放着正式环境和测试环境的配置文件
 
-## How to use this template
-
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
+使用生产环境的配置:
 ```
-
-Then, to run it, cd into `myTabs` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+ionic cordova build android --env prod
 ```
+使用开发环境的配置:
+```
+ionic cordova build android --env dev
+```
+#### 如何使用baseUrl？
 
-Substitute ios for android if not on a Mac.
+> 详见src/page/home
 
