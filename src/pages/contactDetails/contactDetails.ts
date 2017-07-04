@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController} from 'ionic-angular';
-@IonicPage()
+@IonicPage({name: 'contact-detail-page'})
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'page-contact-details',
+  templateUrl: 'contactDetails.html'
 })
-export class ContactPage {
+export class ContactDetailsPage {
 
   constructor(public navCtrl: NavController) {
 
   }
-  jump(){
-    this.navCtrl.push('contact-detail-page');
-  }
-
 
 }
