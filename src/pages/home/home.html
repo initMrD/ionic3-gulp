@@ -9,6 +9,7 @@
   <ion-item>
     我的应用<span item-end (click)="setting()">设置</span>
   </ion-item>
+  <!--注意：dragulaModel不能和*ngFor使用同一个数组，但是两个数组内容必须相同，拖拽后排序的结果可以通过dragulaModel获得-->
   <div [dragula]='"bag-one"' [dragulaModel]='cPluginList' id="pluginlist">
     <div style="width: 24%;transition: all linear 0.5s;position: absolute"
          *ngFor="let item of pluginList;let i = index"  align="center" id={{i}}

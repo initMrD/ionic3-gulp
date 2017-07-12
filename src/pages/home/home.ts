@@ -36,6 +36,7 @@ export class HomePage {
     console.info(this.pluginList);
     this.canDrag = !this.canDrag;
   }
+
   cPluginList = [
     {
       icon:'assets/svg/电话.svg',
