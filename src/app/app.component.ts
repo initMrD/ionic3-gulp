@@ -16,5 +16,9 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+    let umeng = (<any>window).MobclickAgent;
+    if(umeng){
+      umeng.init();
+    }
   }
 }

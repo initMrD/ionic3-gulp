@@ -12,7 +12,7 @@
   <!--注意：dragulaModel不能和*ngFor使用同一个数组，但是两个数组内容必须相同，拖拽后排序的结果可以通过dragulaModel获得-->
   <div [dragula]='"bag-one"' [dragulaModel]='cPluginList' id="pluginlist">
     <div style="width: 24%;transition: all linear 0.5s;position: absolute"
-         *ngFor="let item of pluginList;let i = index"  align="center" id={{i}}
+         *ngFor="let item of pluginList;let i = index"  align="center" id={{i}} (click)="pluginClick(i)"
          [ngStyle]="{'transform': 'translate('+getRight(i)+'px,'+getTop(i)+'px)'}">
       <img src="{{item.icon}}" width="36" height="36" style="display: block"/>
       {{item.name}}

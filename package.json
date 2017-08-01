@@ -24,32 +24,38 @@
     "@ionic-native/core": "3.12.1",
     "@ionic-native/splash-screen": "3.12.1",
     "@ionic-native/status-bar": "3.12.1",
-    "@ionic/storage": "2.0.1",
+    "@ionic/storage": "^2.0.1",
     "cordova-android": "^6.2.3",
+    "cordova-ios": "^4.4.0",
     "cordova-plugin-console": "^1.0.5",
     "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-jumper": "git+https://github.com/initMrD/cordova-plugin-jumper.git",
     "cordova-plugin-splashscreen": "^4.0.3",
     "cordova-plugin-statusbar": "^2.2.2",
     "cordova-plugin-whitelist": "^1.3.1",
+    "cordova-sqlite-storage": "^2.0.4",
     "del": "^3.0.0",
+    "echarts": "^3.6.2",
     "gulp-concat": "^2.6.1",
     "gulp-ts-config": "^1.0.15",
     "ionic-angular": "3.4.2",
     "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "3.0.0",
     "ng2-dragula": "^1.5.0",
+    "ng2-echarts": "0.0.3",
     "q": "^1.5.0",
     "run-sequence": "^1.2.2",
     "rxjs": "5.4.0",
     "sw-toolbox": "3.6.0",
+    "umeng_plugin": "file:///Users/initmrd/Downloads/Umeng",
     "yargs": "^8.0.2",
     "zone.js": "0.8.12"
   },
   "devDependencies": {
     "@ionic/app-scripts": "1.3.8",
-    "@ionic/cli-plugin-cordova": "1.4.0",
-    "@ionic/cli-plugin-gulp": "1.0.1",
-    "@ionic/cli-plugin-ionic-angular": "1.3.1",
+    "@ionic/cli-plugin-cordova": "1.4.1",
+    "@ionic/cli-plugin-gulp": "1.0.2",
+    "@ionic/cli-plugin-ionic-angular": "1.3.2",
     "gulp": "^3.9.1",
     "typescript": "2.3.4"
   },
@@ -61,10 +67,13 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-whitelist": {},
-      "ionic-plugin-keyboard": {}
+      "ionic-plugin-keyboard": {},
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-jumper": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

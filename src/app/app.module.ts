@@ -7,11 +7,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {MyApp} from "./app.component";
 import {HomePage} from "../pages/home/home";
 import {DragulaModule} from "ng2-dragula";
+import {IonicStorageModule} from "@ionic/storage";
+import {ContactDetails2Page} from "../pages/contactDetails2/contactDetails2";
+import {ContactPage} from "../pages/contact/contact";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ContactPage,
+    ContactDetails2Page
   ],
   imports: [
     BrowserModule,
@@ -20,12 +25,15 @@ import {DragulaModule} from "ng2-dragula";
       mode: 'ios',                        //统一样式为ios的样式
       backButtonText: '返回',
       tabsHideOnSubPages: 'true'         //隐藏全部子页面tabs
-    })
+    }),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ContactPage,
+    ContactDetails2Page
   ],
   providers: [
     StatusBar,
