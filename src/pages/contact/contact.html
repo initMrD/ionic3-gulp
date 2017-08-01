@@ -9,13 +9,9 @@
 <ion-content>
   <ion-list>
     <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item (click)="jumpLazy()">
+    <ion-item (click)="jump(item.page)" *ngFor="let item of ioniclist">
       <ion-icon name="ionic" item-left></ion-icon>
-      跳转懒加载页面
-    </ion-item>
-    <ion-item (click)="jump()">
-      <ion-icon name="ionic" item-left></ion-icon>
-      跳转普通页面
+      {{item.name}}
     </ion-item>
   </ion-list>
 </ion-content>

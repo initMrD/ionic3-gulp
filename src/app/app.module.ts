@@ -10,13 +10,14 @@ import {DragulaModule} from "ng2-dragula";
 import {IonicStorageModule} from "@ionic/storage";
 import {ContactDetails2Page} from "../pages/contactDetails2/contactDetails2";
 import {ContactPage} from "../pages/contact/contact";
+import { DashboardComponent } from '../pages/dashboard/dashboard';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ContactPage,
-    ContactDetails2Page
+    ContactDetails2Page,
   ],
   imports: [
     BrowserModule,

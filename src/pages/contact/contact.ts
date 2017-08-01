@@ -11,13 +11,11 @@ export class ContactPage {
 
   }
 
-  jumpLazy() {
-    this.navCtrl.push('contact-detail-page');
+  ioniclist = [{name: "跳转懒加载", page: "contact-detail-page"},
+    {name: "跳转正常页面", page: ContactDetails2Page},
+    {name: "跳转仪表盘", page: "dashboard-component"}];
+
+  jump(name){
+    this.navCtrl.push(name);
   }
-
-  jump() {
-    this.navCtrl.push(ContactDetails2Page);
-  }
-
-
 }
