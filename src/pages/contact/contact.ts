@@ -13,7 +13,8 @@ export class ContactPage {
 
   ioniclist = [{name: "跳转懒加载", page: "contact-detail-page"},
     {name: "跳转正常页面", page: ContactDetails2Page},
-    {name: "跳转仪表盘", page: "dashboard-component"}];
+    {name: "跳转仪表盘", page: "dashboard-component"},
+    {name: "时间轴", page: "TimelinePage"}];
 
   jump(name){
     this.navCtrl.push(name);

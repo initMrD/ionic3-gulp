@@ -1,0 +1,25 @@
+page-timeline {
+  .timeLine-item{
+    min-height: 50px;
+    margin-bottom: -3px;
+  }
+  .timeLine-time{
+    display: inline-block;
+    width: 79px;
+    position: absolute;
+    padding-top: 8px;
+  }
+  .tiemLine-content{
+    display: inline-block;
+    border-left:1px solid blue;
+    min-height: 51px;
+    margin-left: 79px;
+    height: 100%;
+  }
+  .timeLine-icon{
+    position: absolute;
+    left: 86px;
+    padding-top: 8px;
+    font-size: 22px;
+  }
+}

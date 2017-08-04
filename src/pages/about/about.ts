@@ -20,12 +20,14 @@ export class AboutPage {
   }
 
   dwData = [
-    {value: 335, name: '直接访问'},
-    {value: 310, name: '邮件营销'},
-    {value: 234, name: '联盟广告'},
-    {value: 135, name: '视频广告'},
-    {value: 1548, name: '搜索引擎'}
+    {value: 10, name: '4月'},
+    {value: 52, name: '5月'},
+    {value: 200, name: '6月'},
+    {value: 334, name: '7月'},
+    {value: 390, name: '8月'},
+    {value: 330, name: '9月'}
   ];
+  barData = [[3, 10], [4, 52], [5, 200], [6, 334], [7, 390], [8, 330], [9, 220]];
 
   chartFormatter = function (name) {
 
@@ -36,11 +38,109 @@ export class AboutPage {
 // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('pieDemo'));
     // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(this.generateChart(this.dwData));
+    myChart.setOption(this.option);
+    var barChart = echarts.init(document.getElementById('lineDemo'));
+    // 使用刚指定的配置项和数据显示图表。
+    barChart.setOption(this.generateBarChart(this.barData));
   }
-  generateChart(data){
+  option = {
+    tooltip: {
+      trigger: 'item',
+      formatter: "{b}: {c} ({d}%)"
+    },
+    calculable : false,
+    series : [
+      {
+        type:'pie',
+        radius : [50, '80%'],
+        center : ['50%', '50%'],
+        color: ['#D5D5D5', '#EE4000','#2CBBFA'],
+        label: {
+          normal: {
+            show: false
+          },
+          emphasis: {
+            show: false
+          }
+        },
+        lableLine: {
+          normal: {
+            show: false
+          },
+          emphasis: {
+            show: false
+          }
+        },
+        data:[
+          {value:65, name:'test1'},
+          {value:10, name:'test2',selected:true},
+          {value:25, name:'test3'}
+        ]
+      }
+    ]
+  };
+
+
+  generateBarChart(data) {
+    return {
+      tooltip: {
+        show: false
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+          axisTick: {
+            alignWithLabel: true
+          },
+
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value'
+        }
+      ],
+
+      series: [
+        {
+          type: 'bar',
+          barWidth: '60%',
+          data: data,
+          itemStyle:{
+            normal:{
+              color:'#00B8FF'
+            }
+          },
+          markLine: {
+            lineStyle: {
+              normal: {
+                type: 'dashed',
+                width: 2,
+                color: '#EE4000',
+              }
+            },
+            label: {
+              normal: {
+                show: false
+              }
+            },
+            symbolSize: 0,
+            data: [{
+              name: '采购价',
+              yAxis: 150
+            }
+            ]
+          }
+        }
+      ]
+    }
+  }
+
+
+  generateChart(data) {
     var array = {};
-    for(var item in data){
+    for (var item in data) {
       array[data[item].name] = data[item].value;
     }
     return {
@@ -51,14 +151,14 @@ export class AboutPage {
       legend: {
         orient: 'vertical',
         x: 'left',
-        data:data,
+        data: data,
         width: 150,
-        itemWidth:12,
-        itemHeight:12,
-        itemGap:15,
+        itemWidth: 12,
+        itemHeight: 12,
+        itemGap: 15,
         top: 50,
         formatter: function (name) {
-          return name + "          " +array[name];
+          return name + "          " + array[name];
         }
       },
       series: [
@@ -89,7 +189,7 @@ export class AboutPage {
           data: data
         }
       ],
-      color:['#EE4000','#fab202','#3399ff','#50e3c2','#B8E986','#00B8FF']
+      color: ['#EE4000', '#fab202', '#3399ff', '#50e3c2', '#B8E986', '#00B8FF']
     }
   }
 }
